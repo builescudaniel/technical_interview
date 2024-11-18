@@ -58,6 +58,14 @@ body {
     background-color: #ff8533;
 }
 
+.btn-primary:focus {
+    background-color: #ff8533;
+}
+
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+
 .btn-secondary {
     background-color: var(--secondary-color);
     color: white;
@@ -133,7 +141,12 @@ footer {
 /* No hover effect for the card with class 'no-hover' */
 .no-hover:hover {
     transform: none;
-    box-shadow: none;
+    box-shadow: none !important;
+}
+
+.no-hover {
+    transform: none;
+    box-shadow: none !important;
 }
 
 /* Custom Checkbox Styling */
@@ -155,5 +168,20 @@ footer {
 .form-check-input.custom-checkbox:checked {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
+}
+
+/* Styling for the search button */
+.input-group .btn-primary {
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 0 6px 6px 0;
+}
+
+.input-group .form-control {
+    border-radius: 6px 0 0 6px;
+}
+
+.weight-bold {
+    font-weight: bold;
 }
 
