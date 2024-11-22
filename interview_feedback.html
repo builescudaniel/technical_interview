@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interview Feedback - InterviewPrep</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css"> <!-- Link to external CSS file -->
+    <style>
+        pre {
+            font-family: 'Source Code Pro', monospace;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .question-section {
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .question-section.correct {
+            border: 2px solid #28a745;
+        }
+        .question-section.incorrect {
+            border: 2px solid #dc3545;
+        }
+        .correct-solution {
+            margin-top: 15px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">InterviewPrep</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item"><a class="nav-link" href="index.html">Interviews</a></li>
+            <li class="nav-item"><a class="nav-link" href="plans.html">Plans</a></li>
+            <li class="nav-item"><a class="nav-link active" href="history.html">History</a></li>
+        </ul>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="btn btn-outline-light mx-2" href="login.html">Login</a>
+                <a class="btn btn-outline-light" href="#">Login with Google</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Main Content -->
+<div class="container my-5">
+    <div class="text-center mb-4">
+        <h2 class="text-primary text-secondary">Interview Feedback</h2>
+        <p class="text-muted">Detailed feedback and insights for your interview.</p>
+    </div>
+
+    <!-- Interview Information -->
+    <div class="card shadow-sm mb-4 no-hover">
+        <div class="card-body">
+            <h5 class="card-title text-secondary">Interview Details</h5>
+            <p><strong>Title:</strong> Data Scientist with Python</p>
+            <p><strong>Description:</strong> Enhance your data science skills with Python. This role involves mastering data analysis, machine learning, and visualization.</p>
+            <p class="card-text mb-0"><small><strong>Languages Required:</strong> <span class="badge badge-info">Python</span> <span class="badge badge-info">SQL</span></small></p>
+            <p class="card-text"><small><strong>Interview Questions From:</strong> <span class="badge badge-info">Python</span> <span class="badge badge-info">SQL</span></small></p>
+        </div>
+    </div>
+
+    <!-- General Feedback Section -->
+    <div class="card shadow-sm mb-4 no-hover">
+        <div class="card-body">
+            <h5 class="card-title text-secondary">General Feedback</h5>
+            <p><strong>General Score:</strong> 85%</p>
+            <p><strong>Probability of Getting the Job:</strong> High</p>
+            <p><strong>General Opinion:</strong> Great performance overall! Your understanding of data structures and algorithms is commendable, but focus on optimizing your solutions further.</p>
+        </div>
+    </div>
+
+    <!-- Detailed Questions Feedback -->
+    <div class="card shadow-sm mb-4 no-hover">
+        <div class="card-body">
+            <h5 class="card-title text-secondary">Detailed Question Feedback</h5>
+
+            <!-- Question 1 -->
+            <div class="question-section correct">
+                <p><strong>Question:</strong> Write a function to reverse a string.</p>
+                <pre>
+def reverse_string(s):
+    return s[::-1]
+                </pre>
+                <p><strong>Feedback:</strong> Correct. Efficient and clean solution.</p>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question-section incorrect">
+                <p><strong>Question:</strong> Implement a binary search algorithm.</p>
+                <pre>
+def binary_search(arr, target):
+    return -1  # Placeholder
+                </pre>
+                <p><strong>Feedback:</strong> Incorrect. Your implementation is incomplete. Review binary search logic.</p>
+                <div class="correct-solution">
+                    <p><strong>Correct Solution:</strong></p>
+                    <pre>
+def binary_search(arr, target):
+    left, right = 0, len(arr) - 1
+    while left <= right:
+        mid = (left + right) // 2
+        if arr[mid] == target:
+            return mid
+        elif arr[mid] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    return -1
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question-section correct">
+                <p><strong>Question:</strong> Explain the difference between a list and a tuple in Python.</p>
+                <p><strong>Answer:</strong> Lists are mutable, while tuples are immutable.</p>
+                <p><strong>Feedback:</strong> Correct. Clear and concise explanation.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Motivational Message -->
+    <div class="card shadow-sm mb-4 no-hover">
+        <div class="card-body text-center">
+            <h5 class="card-title text-secondary">Keep Going!</h5>
+            <p class="text-muted">You're doing great! Each interview is a step closer to your dream job. Stay consistent, and keep improving.</p>
+        </div>
+    </div>
+
+    <div class="mt-4 text-center">
+        <a href="index.html" class="btn btn-primary btn-lg">Start A New Interview</a>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 InterviewPrep. All rights reserved.</p>
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
